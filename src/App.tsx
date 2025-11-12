@@ -37,7 +37,7 @@ function App() {
           />
           
 
-          <div className="flex flex-col min-h-screen bg-gray-50 no-horizontal-scroll">
+          <div className="flex flex-col min-h-screen bg-gray-50">
             <Header 
               logo={{
                 src: YTMLogo,

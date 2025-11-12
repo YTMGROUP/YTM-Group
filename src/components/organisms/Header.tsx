@@ -207,7 +207,7 @@ const Header: React.FC<HeaderProps> = ({
                 <div key={item.label} className="relative">
                   {item.children ? (
                     <Popover className="relative">
-                      {({ open }) => (
+                      {({ open, close }) => (
                         <>
                           <Popover.Button
                             className={cn(
@@ -248,6 +248,7 @@ const Header: React.FC<HeaderProps> = ({
                                         ? 'bg-primary-50 text-primary-600'
                                         : 'text-slate-700 hover:bg-neutral-50 hover:text-primary-600'
                                     )}
+                                    onClick={() => close()}
                                   >
                                     {subItem.label}
                                   </NavLink>

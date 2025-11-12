@@ -102,36 +102,37 @@ const TeamMember: React.FC<TeamMemberProps> = ({
     );
   };
 
-  const renderSpecializations = () => {
-    if (!teamMember.specializations || teamMember.specializations.length === 0) {
-      return null;
-    }
+  // Specializations temporarily disabled
+  // const renderSpecializations = () => {
+  //   if (!teamMember.specializations || teamMember.specializations.length === 0) {
+  //     return null;
+  //   }
 
-    const visibleSpecs = variant === 'compact' 
-      ? teamMember.specializations.slice(0, 3) 
-      : teamMember.specializations;
+  //   const visibleSpecs = variant === 'compact' 
+  //     ? teamMember.specializations.slice(0, 3) 
+  //     : teamMember.specializations;
 
-    return (
-      <div className="space-y-2">
-        <h4 className={variant === 'detailed' ? 'text-sm sm:text-base font-medium text-neutral-700' : 'text-sm font-medium text-neutral-700'}>Specializations</h4>
-        <div className="flex flex-wrap gap-1 sm:gap-2">
-          {visibleSpecs.map((spec, index) => (
-            <span
-              key={index}
-              className={variant === 'detailed' ? 'inline-block bg-neutral-100 text-neutral-700 px-2 sm:px-3 py-1 rounded text-xs sm:text-sm break-words' : 'inline-block bg-neutral-100 text-neutral-700 px-2 py-1 rounded text-xs'}
-            >
-              {spec}
-            </span>
-          ))}
-          {variant === 'compact' && teamMember.specializations && teamMember.specializations.length > 3 && (
-            <span className="inline-block bg-neutral-100 text-neutral-600 px-2 py-1 rounded text-xs">
-              +{teamMember.specializations.length - 3} more
-            </span>
-          )}
-        </div>
-      </div>
-    );
-  };
+  //   return (
+  //     <div className="space-y-2">
+  //       <h4 className={variant === 'detailed' ? 'text-sm sm:text-base font-medium text-neutral-700' : 'text-sm font-medium text-neutral-700'}>Specializations</h4>
+  //       <div className="flex flex-wrap gap-1 sm:gap-2">
+  //         {visibleSpecs.map((spec, index) => (
+  //           <span
+  //             key={index}
+  //             className={variant === 'detailed' ? 'inline-block bg-neutral-100 text-neutral-700 px-2 sm:px-3 py-1 rounded text-xs sm:text-sm break-words' : 'inline-block bg-neutral-100 text-neutral-700 px-2 py-1 rounded text-xs'}
+  //           >
+  //             {spec}
+  //           </span>
+  //         ))}
+  //         {variant === 'compact' && teamMember.specializations && teamMember.specializations.length > 3 && (
+  //           <span className="inline-block bg-neutral-100 text-neutral-600 px-2 py-1 rounded text-xs">
+  //             +{teamMember.specializations.length - 3} more
+  //           </span>
+  //         )}
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   const baseClasses = `
     group relative bg-white rounded-2xl shadow-sm border border-neutral-200 
@@ -221,9 +222,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           )}
 
           {/* Specializations - Hidden on mobile for card variant only */}
-          <div className={variant === 'detailed' ? 'block' : 'hidden sm:block'}>
+          {/* <div className={variant === 'detailed' ? 'block' : 'hidden sm:block'}>
             {renderSpecializations()}
-          </div>
+          </div> */}
 
           {/* Credentials */}
           {renderCredentials()}
