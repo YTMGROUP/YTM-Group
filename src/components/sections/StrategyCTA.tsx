@@ -15,7 +15,7 @@ interface StrategyCTAProps {
  */
 const StrategyCTA: React.FC<StrategyCTAProps> = ({ className = '' }) => {
   return (
-    <section className={`py-8 sm:py-12 lg:py-20 bg-gray-50 ${className}`}>
+    <section className={`pt-4 sm:pt-10 lg:pt-8 pb-8 sm:pb-12 lg:pb-20 bg-gray-50 ${className}`}>
       <Container size="2xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Left: copy + CTA (theme-consistent sizing) */}

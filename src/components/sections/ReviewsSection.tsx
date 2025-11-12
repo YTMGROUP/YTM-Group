@@ -29,7 +29,7 @@ const ReviewsSection: React.FC<ReviewsSectionProps> = ({ className = '' }) => {
   }, []);
 
   return (
-    <section className={`py-20 sm:py-24 bg-gray-50 ${className}`}>
+    <section className={`pt-20 sm:pt-24 pb-8 sm:pb-10 bg-gray-50 ${className}`}>
       <Container size="xl">
         <div className="mb-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 sm:text-3xl">What clients say</h2>
