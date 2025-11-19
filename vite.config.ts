@@ -150,6 +150,8 @@ export default defineConfig(({ mode }) => ({
       'console.warn': mode === 'production' ? 'void 0; //' : 'console.warn',
       'console.info': mode === 'production' ? 'void 0; //' : 'console.info',
       preventAssignment: true,
+      // Exclude node_modules to prevent corrupting third-party libraries
+      exclude: ['**/node_modules/**'],
     }),
   ].filter(Boolean) as PluginOption[],
   
@@ -189,7 +191,9 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 800,
     
     // Enable minification and CSS code splitting
-    minify: 'terser',
+    // Minification disabled temporarily due to @headlessui/react v1.7.17 + React 19 syntax issue
+    // Vercel's build environment may handle this differently
+    minify: false,
     cssCodeSplit: true,
     
     // Generate source maps in development
@@ -345,6 +349,21 @@ export default defineConfig(({ mode }) => ({
       // Large libraries that should be loaded on-demand
       'framer-motion',
     ],
+    // Pre-bundle @headlessui/react to avoid syntax issues
+    esbuildOptions: {
+      target: 'esnext',
+      supported: {
+        'top-level-await': true,
+      },
+    },
+  },
+
+  // Esbuild options for minification
+  esbuild: {
+    target: 'esnext',
+    // Allow minification to proceed even with syntax quirks
+    legalComments: 'none',
+    treeShaking: true,
   },
 
   // CSS processing optimizations
