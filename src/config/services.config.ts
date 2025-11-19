@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
   {
     id: 'financial-planning',
     title: 'Financial Planning',
-    description: 'Expert financial planning services to help you build wealth, plan for retirement, and secure your financial future with tailored strategies.',
+    description: 'Financial planning services to help you build wealth, plan for retirement, and secure your financial future with tailored strategies.',
     shortDescription: 'Expert wealth building and retirement planning with tailored strategies.',
     icon: FinancialPlanningIcon,
     iconLabel: '3D financial planning icon representing wealth building and financial growth',
