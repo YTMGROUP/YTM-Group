@@ -152,7 +152,10 @@ const ResourcePreloader: React.FC<ResourcePreloaderProps> = ({
 
   /**
    * Prefetch external resources based on user behavior
+   * DISABLED: Not suitable for SPAs with client-side routing
+   * This was causing 404 errors on Vercel since routes are handled client-side
    */
+  /*
   useEffect(() => {
     const handleMouseEnter = (event: MouseEvent) => {
       const target = event.target;
@@ -184,6 +187,7 @@ const ResourcePreloader: React.FC<ResourcePreloaderProps> = ({
       document.removeEventListener('mouseenter', handleMouseEnter, true);
     };
   }, [enableAnalytics]);
+  */
 
   // This component doesn't render anything visible
   return null;
