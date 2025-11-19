@@ -231,7 +231,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           {/* Contact Info */}
           <div className="flex items-center justify-between pt-2 sm:pt-4">
             {renderContactInfo()}
-            {showLinkedIn && teamMember.linkedInUrl && (
+            {/* LinkedIn button temporarily hidden */}
+            {/* {showLinkedIn && teamMember.linkedInUrl && (
               <a
                 href={teamMember.linkedInUrl}
                 target="_blank"
@@ -241,7 +242,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               >
                 LinkedIn →
               </a>
-            )}
+            )} */}
           </div>
         </div>
       </div>
