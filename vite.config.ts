@@ -142,13 +142,10 @@ export default defineConfig(({ mode }) => ({
       template: 'treemap', // 'treemap', 'sunburst', 'network'
     }),
 
-    // Replace environment variables and dead code elimination
+    // Replace environment variables
     replace({
       'process.env.NODE_ENV': JSON.stringify(mode),
       'import.meta.env.MODE': JSON.stringify(mode),
-      'console.log': mode === 'production' ? 'void 0; //' : 'console.log',
-      'console.warn': mode === 'production' ? 'void 0; //' : 'console.warn',
-      'console.info': mode === 'production' ? 'void 0; //' : 'console.info',
       preventAssignment: true,
       // Exclude node_modules to prevent corrupting third-party libraries
       exclude: ['**/node_modules/**'],
