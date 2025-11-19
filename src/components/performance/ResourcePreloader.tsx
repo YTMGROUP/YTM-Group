@@ -121,7 +121,10 @@ const ResourcePreloader: React.FC<ResourcePreloaderProps> = ({
 
   /**
    * Prefetch likely next pages based on current route
+   * DISABLED: Not suitable for SPAs with client-side routing
+   * This was causing 404 errors when trying to prefetch routes as static files
    */
+  /*
   useEffect(() => {
     const prefetchLinks: HTMLLinkElement[] = [];
     
@@ -149,6 +152,7 @@ const ResourcePreloader: React.FC<ResourcePreloaderProps> = ({
       });
     };
   }, [location.pathname, prefetchRoutes, enableAnalytics]);
+  */
 
   /**
    * Prefetch external resources based on user behavior
