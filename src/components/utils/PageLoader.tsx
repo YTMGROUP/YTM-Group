@@ -35,24 +35,9 @@ const PageLoader: React.FC<PageLoaderProps> = ({
       
       {/* Loading text */}
       <div className="mt-6 text-center">
-        <h3 className="text-lg font-medium text-neutral-900 mb-2">
+        <h3 className="text-lg font-medium text-neutral-900">
           {message}
         </h3>
-        <p className="text-sm text-neutral-500 max-w-sm">
-          Please wait while we load the page content for you.
-        </p>
-      </div>
-      
-      {/* Progress bar animation */}
-      <div className="mt-8 w-64 bg-neutral-200 rounded-full h-1 overflow-hidden">
-        <div className="bg-gradient-to-r from-primary-500 to-primary-600 h-full rounded-full animate-pulse"></div>
-      </div>
-      
-      {/* Pulsating dots */}
-      <div className="flex space-x-2 mt-6">
-        <div className="w-2 h-2 bg-primary-500 rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-primary-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-        <div className="w-2 h-2 bg-primary-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
       </div>
     </div>
   );
