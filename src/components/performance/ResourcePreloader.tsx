@@ -155,7 +155,11 @@ const ResourcePreloader: React.FC<ResourcePreloaderProps> = ({
    */
   useEffect(() => {
     const handleMouseEnter = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
+      const target = event.target;
+      
+      // Ensure target is an Element before calling .closest()
+      if (!(target instanceof Element)) return;
+      
       const link = target.closest('a[href]') as HTMLAnchorElement;
       
       if (link && link.href && link.href.startsWith(window.location.origin)) {
