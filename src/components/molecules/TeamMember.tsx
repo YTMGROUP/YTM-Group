@@ -64,7 +64,6 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           objectFit="cover"
           onError={handleImageError}
           priority={false}
-          placeholder="empty"
         />
       </div>
     );
