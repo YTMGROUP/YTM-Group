@@ -37,7 +37,7 @@ export { default as FinancialImage } from './services/financial-planning.png';
 export { default as LegalImage } from './services/legal.png';
 export { default as BusinessInsuranceImage } from './services/business-insurance.png';
 export { default as BusinessAdvisoryImage } from './services/business-advisory.png';
-export { default as PropertyServicesImage } from './services/property-services.png';
+export { default as PropertyServicesImage } from './services/Property-services.png';
 export { default as UnderOneRoofImage } from './images/under-one-roof.png';
 export { default as RateReviewImage } from './images/ytm-rate-review.png';
 export { default as FinancialGrowthImage } from './images/financial-growth.png';
