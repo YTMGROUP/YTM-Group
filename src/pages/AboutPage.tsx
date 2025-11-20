@@ -110,7 +110,7 @@ const AboutPage: React.FC = () => {
                   At YTM Group, we specialise in crafting personalised financial solutions tailored to your unique needs.
                 </p>
                 <p>
-                  As a team of Mortgage advisers, financial planners, and lawyers, we empower individuals and families to build wealth, allowing them to focus on what brings happiness.
+                  As a team of professionals we empower individuals and families to build wealth, allowing them to focus on what brings happiness.
                 </p>
                 <p>
                   Whether you're buying your first home, refinancing, planning for retirement, or seeking business solutions, our accredited planners and advisers offer trusted, practical guidance in mortgages, financial planning, legal services, and business advisory.

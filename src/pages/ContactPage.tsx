@@ -31,7 +31,7 @@ const ContactPage: React.FC = () => {
               Book Your Free Strategy Call
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-neutral-600 leading-relaxed">
-            15–20 min consultation · No obligation · Get expert advice
+            15–20 min consultation · No obligation · Get professional advice
             </p>
           </div>
         </Container>
