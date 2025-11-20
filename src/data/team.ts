@@ -24,7 +24,7 @@ export const sampleTeamMembers: TeamMember[] = [
     shortBio: 'Seasoned mortgage consultant with a strong banking background, offering personalised, transparent guidance and deep insight into lending policies and loan structures.',
     fullBio: 'Almo Dhamani is a seasoned mortgage consultant with a wealth of experience from the banking world. With a strong commitment to providing personalised service, Almo aims to make the mortgage process effortless and transparent for his clients. His background in banking equips him with deep insights into lending policies, product structures, and financial solutions tailored to individual needs, helping clients secure the right loan with confidence.',
     photoUrl: AlmoPhoto,
-    specializations: ['Home Loans', 'Investment Property Loans'],
+    specializations: ['Home Loans', 'Investment Property Loans', 'Loan Structuring'],
     linkedInUrl: '',
     isActive: true
   },
@@ -37,7 +37,7 @@ export const sampleTeamMembers: TeamMember[] = [
     shortBio: 'Mortgage adviser with an entrepreneurial background, providing proactive, commercially minded advice and clear guidance to first-home buyers, investors and business owners.',
     fullBio: 'Roohee Rahman is a mortgage adviser with a strong entrepreneurial background. Roohee brings valuable insights from her experience building and managing businesses, translating them into strategic, commercially minded advice for her clients in the mortgage space. Her proactive approach and business acumen enable her to offer innovative solutions that meet diverse financial needs, whether for first-home buyers, investors, or business owners. With a focus on clear communication and long-term client relationships, Roohee guides clients through the lending process with confidence and clarity.',
     photoUrl: RooheePhoto,
-    specializations: ['Home Loans', 'Investment Property Loans'],
+    specializations: ['Home Loans', 'Investment Property Loans', 'Business & Commercial Lending'],
     linkedInUrl: '',
     isActive: true
   },
