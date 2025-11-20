@@ -18,7 +18,7 @@ export const DEFAULT_SEO: PageSEO = {
   description: 'Leading financial planning, legal services, and business consulting firm in Australia. Expert guidance for wealth building, tax optimization, and business growth.',
   keywords: 'financial planning Australia, mortgage brokers Melbourne, business consulting, legal services, tax optimization, wealth management',
   canonical: SITE_URL,
-  ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+  ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
   ogType: 'website',
   twitterCard: 'summary_large_image'
 };
@@ -77,7 +77,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Professional mortgage broking and lending solutions. Access to 40+ lenders, competitive rates, and expert guidance. Home loans, investment property, refinancing.',
     keywords: 'mortgage broker Melbourne, home loans Australia, investment property loans, refinancing, first home buyer, loan comparison',
     canonical: `${SITE_URL}/services/lending`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -103,7 +103,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Comprehensive financial planning including retirement planning, investment strategies, tax optimization, and estate planning. CFP certified advisors.',
     keywords: 'financial planning Australia, retirement planning, investment advice, wealth management, tax optimization, estate planning, CFP',
     canonical: `${SITE_URL}/services/financial-planning`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -121,7 +121,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Professional legal services including business law, contract review, compliance, and litigation support. Experienced attorneys providing expert legal guidance.',
     keywords: 'business law Australia, legal services Melbourne, contract review, compliance, litigation, legal advice, attorneys',
     canonical: `${SITE_URL}/services/legal-services`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -139,7 +139,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Comprehensive business insurance including public liability, professional indemnity, workers compensation, and cyber liability. Protect your business assets.',
     keywords: 'business insurance Australia, public liability, professional indemnity, workers compensation, cyber insurance, business protection',
     canonical: `${SITE_URL}/services/business-insurance`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -157,7 +157,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Expert business advisory services including strategic planning, operational efficiency, market analysis, and growth consulting. Transform your business.',
     keywords: 'business advisory Australia, business consulting, strategic planning, operational efficiency, business growth, business transformation',
     canonical: `${SITE_URL}/services/business-advisory`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -175,7 +175,7 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: 'Comprehensive property services including commercial real estate, property management, valuation, and investment opportunities. Expert property guidance.',
     keywords: 'property services Australia, commercial real estate, property management, property valuation, property investment, real estate Melbourne',
     canonical: `${SITE_URL}/services/property-services`,
-    ogImage: `${SITE_URL}/images/ytm-og-image.png`,
+    ogImage: `${SITE_URL}/images/ytm-og-image-hq.png`,
     structuredData: {
       '@context': 'https://schema.org',
       '@type': 'Service',
