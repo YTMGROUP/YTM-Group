@@ -63,7 +63,7 @@ export const sampleTeamMembers: TeamMember[] = [
     shortBio: 'Compliance Manager helping property investors and businesses manage regulatory risk, monitoring compliance frameworks and governance to protect operations and maintain industry standards.',
     fullBio: 'Niroshan is a Compliance Manager helping property investors and businesses maintain regulatory excellence and risk mitigation. He monitors compliance frameworks, conducts risk assessments, implements governance protocols, and ensures regulatory adherence across all operations. This leads to protected business operations and maintained industry standards, delivered with systematic precision and proactive oversight.',
     photoUrl: TeamPhoto,
-    specializations: [],
+    specializations: ['Regulatory Compliance', 'Risk Management', 'Governance & Controls'],
     linkedInUrl: '',
     isActive: true
   },
@@ -76,7 +76,7 @@ export const sampleTeamMembers: TeamMember[] = [
     shortBio: 'Client Service Consultant providing proactive, personalised support, coordinating services and communications to deliver seamless experiences and successful outcomes.',
     fullBio: 'Tash is a Client Service Consultant helping businesses and individuals receive exceptional support throughout their financial journey. She coordinates multi-service solutions, manages client communications, streamlines service delivery, and ensures seamless experiences across all touchpoints. This leads to enhanced client satisfaction and successful outcomes, delivered with proactive attention and personalised care.',
     photoUrl: TeamPhoto,
-    specializations: [],
+    specializations: ['Client Experience', 'Service Coordination', 'Client Communications'],
     linkedInUrl: '',
     isActive: true
   },
