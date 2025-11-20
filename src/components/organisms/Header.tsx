@@ -61,11 +61,12 @@ const defaultNavigation: NavigationItem[] = [
       href: service.href,
     })),
   },
-  {
-    label: 'Testimonials',
-    href: '/testimonials',
-    description: 'What our clients say about us',
-  },
+  // TODO: Uncomment when video testimonials are ready
+  // {
+  //   label: 'Testimonials',
+  //   href: '/testimonials',
+  //   description: 'What our clients say about us',
+  // },
   {
     label: 'Contact',
     href: '/contact',
@@ -202,7 +203,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex lg:items-center lg:space-x-8">
+            <div className="hidden lg:flex lg:items-center lg:space-x-12">
               {navigation.map((item) => (
                 <div key={item.label} className="relative">
                   {item.children ? (

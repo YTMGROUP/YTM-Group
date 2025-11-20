@@ -9,7 +9,8 @@ import PageTransition from '../components/animations/PageTransition';
 const HomePage = React.lazy(() => import('../pages/HomePage'));
 const AboutPage = React.lazy(() => import('../pages/AboutPage'));
 const ContactPage = React.lazy(() => import('../pages/ContactPage'));
-const TestimonialsPage = React.lazy(() => import('../pages/TestimonialsPage'));
+// TODO: Uncomment when video testimonials are ready
+// const TestimonialsPage = React.lazy(() => import('../pages/TestimonialsPage'));
 const LendingPage = React.lazy(() => import('../pages/LendingPage'));
 const FinancialPlanningPage = React.lazy(() => import('../pages/FinancialPlanningPage'));
 const LegalServicesPage = React.lazy(() => import('../pages/LegalServicesPage'));
@@ -51,10 +52,11 @@ const AppRouter: React.FC = () => {
           path="/contact" 
           element={<RouteWrapper component={ContactPage} routeName="Contact" />} 
         />
-        <Route 
+        {/* TODO: Uncomment when video testimonials are ready */}
+        {/* <Route 
           path="/testimonials" 
           element={<RouteWrapper component={TestimonialsPage} routeName="Testimonials" />} 
-        />
+        /> */}
         
         {/* Service Pages - Updated to match services.config.ts href paths */}
         <Route 

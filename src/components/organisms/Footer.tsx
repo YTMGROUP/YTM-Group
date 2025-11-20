@@ -59,7 +59,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Testimonials', href: '/testimonials' },
+    // TODO: Uncomment when video testimonials are ready
+    // { name: 'Testimonials', href: '/testimonials' },
     { name: 'Contact', href: '/contact' },
   ];
 
