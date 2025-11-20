@@ -1,4 +1,86 @@
 {
+  "redirects": [
+    {
+      "source": "/financial-planning/:path*",
+      "destination": "/services/financial-planning",
+      "permanent": true
+    },
+    {
+      "source": "/financial-planning",
+      "destination": "/services/financial-planning",
+      "permanent": true
+    },
+    {
+      "source": "/lending/:path*",
+      "destination": "/services/lending",
+      "permanent": true
+    },
+    {
+      "source": "/lending",
+      "destination": "/services/lending",
+      "permanent": true
+    },
+    {
+      "source": "/legal-services/:path*",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal-services",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal/:path*",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/business-insurance/:path*",
+      "destination": "/services/business-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/business-insurance",
+      "destination": "/services/business-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/business-advisory/:path*",
+      "destination": "/services/business-advisory",
+      "permanent": true
+    },
+    {
+      "source": "/business-advisory",
+      "destination": "/services/business-advisory",
+      "permanent": true
+    },
+    {
+      "source": "/property-services/:path*",
+      "destination": "/services/property",
+      "permanent": true
+    },
+    {
+      "source": "/property-services",
+      "destination": "/services/property",
+      "permanent": true
+    },
+    {
+      "source": "/property/:path*",
+      "destination": "/services/property",
+      "permanent": true
+    },
+    {
+      "source": "/property",
+      "destination": "/services/property",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
