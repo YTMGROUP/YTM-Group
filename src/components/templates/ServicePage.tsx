@@ -144,7 +144,7 @@ const ServicePage: React.FC<ServicePageProps> = ({
                   Service Options
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed">
-                  Our {title.toLowerCase()} are designed to help you achieve your property and investment goals with competitive rates and flexible terms. Whether you're a first-time homebuyer, seasoned investor, or business owner looking for commercial financing, our experienced team provides personalised service throughout the entire process.
+                  At YTM Group, we offer a comprehensive range of tailored options for {title.toLowerCase()} so you can choose the solutions that best fit your goals and circumstances.
                 </p>
               </div>
 

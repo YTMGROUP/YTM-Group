@@ -242,7 +242,7 @@ const AboutPage: React.FC = () => {
               },
               {
                 title: "Expertise",
-                description: "Our team brings decades of combined experience across all areas of financial services.",
+                description: "Our team brings years of combined experience across all areas of financial services.",
                 shortDescription: "Decades of financial services experience.",
                 icon: ExpertiseIcon
               },
