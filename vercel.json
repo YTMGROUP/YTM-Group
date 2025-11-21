@@ -83,7 +83,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!images|favicon|robots|sitemap|site\\.webmanifest|.*\\.(ico|png|jpg|jpeg|svg|webp|css|js|json|txt|xml)).*)",
       "destination": "/index.html"
     }
   ]
