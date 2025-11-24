@@ -1,18 +1,18 @@
 {
   "redirects": [
     {
-      "source": "/financial-planning/:path*",
-      "destination": "/services/financial-planning",
-      "permanent": true
-    },
-    {
       "source": "/financial-planning",
       "destination": "/services/financial-planning",
       "permanent": true
     },
     {
-      "source": "/lending/:path*",
-      "destination": "/services/lending",
+      "source": "/financial-planning/",
+      "destination": "/services/financial-planning",
+      "permanent": true
+    },
+    {
+      "source": "/financial-planning/:path+",
+      "destination": "/services/financial-planning",
       "permanent": true
     },
     {
@@ -21,8 +21,13 @@
       "permanent": true
     },
     {
-      "source": "/legal-services/:path*",
-      "destination": "/services/legal",
+      "source": "/lending/",
+      "destination": "/services/lending",
+      "permanent": true
+    },
+    {
+      "source": "/lending/:path+",
+      "destination": "/services/lending",
       "permanent": true
     },
     {
@@ -31,7 +36,12 @@
       "permanent": true
     },
     {
-      "source": "/legal/:path*",
+      "source": "/legal-services/",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal-services/:path+",
       "destination": "/services/legal",
       "permanent": true
     },
@@ -41,8 +51,13 @@
       "permanent": true
     },
     {
-      "source": "/business-insurance/:path*",
-      "destination": "/services/business-insurance",
+      "source": "/legal/",
+      "destination": "/services/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal/:path+",
+      "destination": "/services/legal",
       "permanent": true
     },
     {
@@ -51,8 +66,13 @@
       "permanent": true
     },
     {
-      "source": "/business-advisory/:path*",
-      "destination": "/services/business-advisory",
+      "source": "/business-insurance/",
+      "destination": "/services/business-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/business-insurance/:path+",
+      "destination": "/services/business-insurance",
       "permanent": true
     },
     {
@@ -61,8 +81,13 @@
       "permanent": true
     },
     {
-      "source": "/property-services/:path*",
-      "destination": "/services/property",
+      "source": "/business-advisory/",
+      "destination": "/services/business-advisory",
+      "permanent": true
+    },
+    {
+      "source": "/business-advisory/:path+",
+      "destination": "/services/business-advisory",
       "permanent": true
     },
     {
@@ -71,7 +96,12 @@
       "permanent": true
     },
     {
-      "source": "/property/:path*",
+      "source": "/property-services/",
+      "destination": "/services/property",
+      "permanent": true
+    },
+    {
+      "source": "/property-services/:path+",
       "destination": "/services/property",
       "permanent": true
     },
@@ -81,8 +111,13 @@
       "permanent": true
     },
     {
-      "source": "/how-we-help/:path*",
-      "destination": "/about",
+      "source": "/property/",
+      "destination": "/services/property",
+      "permanent": true
+    },
+    {
+      "source": "/property/:path+",
+      "destination": "/services/property",
       "permanent": true
     },
     {
@@ -91,8 +126,13 @@
       "permanent": true
     },
     {
-      "source": "/blog/:path*",
-      "destination": "/",
+      "source": "/how-we-help/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/how-we-help/:path+",
+      "destination": "/about",
       "permanent": true
     },
     {
@@ -101,8 +141,13 @@
       "permanent": true
     },
     {
-      "source": "/success-stories/:path*",
-      "destination": "/about",
+      "source": "/blog/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path+",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -111,12 +156,27 @@
       "permanent": true
     },
     {
-      "source": "/resources/:path*",
-      "destination": "/contact",
+      "source": "/success-stories/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/success-stories/:path+",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/resources",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/resources/",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/resources/:path+",
       "destination": "/contact",
       "permanent": true
     }
