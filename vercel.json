@@ -79,12 +79,63 @@
       "source": "/property",
       "destination": "/services/property",
       "permanent": true
+    },
+    {
+      "source": "/how-we-help/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/how-we-help",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/success-stories/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/success-stories",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/resources/:path*",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/contact",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/:path((?!.*\\.).*)",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
     }
   ]
 }
