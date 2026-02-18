@@ -122,8 +122,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                   <div className="flex items-start gap-3 text-gray-300">
                     <MapPinIcon className="h-5 w-5 text-primary-400 mt-0.5" />
                     <div>
-                      <p>1 Princess St</p>
-                      <p>Kew, VIC 3101</p>
+                      <p>Suite 503 Level 5</p>
+                      <p>1 Princess Street</p>
+                      <p>KEW VIC 3101</p>
                       <p>Australia</p>
                     </div>
                   </div>

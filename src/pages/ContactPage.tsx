@@ -131,8 +131,9 @@ const ContactPage: React.FC = () => {
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-neutral-800 mb-2">Office</h3>
               <p className="text-sm sm:text-base text-neutral-600">
-                1 Princess St<br />
-                Kew VIC 3101<br />
+                Suite 503 Level 5<br />
+                1 Princess Street<br />
+                KEW VIC 3101<br />
                 Australia
               </p>
             </div>

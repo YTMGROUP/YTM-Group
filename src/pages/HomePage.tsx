@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
         name="YTM Group"
         description="Leading financial planning and legal services firm in Australia, helping families build generational wealth through expert financial strategies."
         address={{
-          streetAddress: "1 Princess St",
+          streetAddress: "Suite 503 Level 5, 1 Princess Street",
           addressLocality: "Kew",
           addressRegion: "VIC",
           postalCode: "3101",

@@ -212,7 +212,7 @@ const TermsAndConditionsPage: React.FC = () => {
                   <p><strong>YTM Group</strong></p>
                   <p>Email: info@ytmgroup.com.au</p>
                   <p>Phone: (03) 7046 9786</p>
-                  <p>Address: 1 Princess St, Kew VIC 3101, Australia</p>
+                  <p>Address: Suite 503 Level 5, 1 Princess Street, KEW VIC 3101, Australia</p>
                 </div>
               </div>
             </section>
