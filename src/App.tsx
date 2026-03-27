@@ -1,13 +1,45 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Header, Footer, GoogleAnalytics, ResourcePreloader } from '@/components';
 import { YTMLogo } from '@/assets';
-import AppRouter from '@/router/routes';
+import AppRouter from '@/router/AppRouter';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
-import { useLocation } from 'react-router-dom';
 import React from 'react';
 
-const App: React.FC = () => {
+// Content that depends on location must be inside Router
+function AppContent() {
+  const location = useLocation();
+
+  // Routes where Header/Footer should be hidden
+  const hideLayoutRoutes = ['/services/equipment-finance'];
+  const hideLayout = hideLayoutRoutes.includes(location.pathname);
+
+  return (
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {!hideLayout && (
+        <Header 
+          logo={{
+            src: YTMLogo,
+            alt: 'YTM Group',
+            href: '/'
+          }}
+        />
+      )}
+
+      <main className={hideLayout ? 'h-screen' : 'flex-grow'}>
+        <AppRouter />
+      </main>
+
+      {!hideLayout && <Footer />}
+    </div>
+  );
+}
+
+function App() {
+  const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+
+  const criticalImages: string[] = [];
+
   return (
     <HelmetProvider>
       <BrowserRouter
@@ -17,49 +49,22 @@ const App: React.FC = () => {
         }}
       >
         <SmoothScrollProvider>
+          <GoogleAnalytics 
+            trackingId={GA_TRACKING_ID}
+            enableDevelopmentTracking={false}
+          />
+
+          <ResourcePreloader
+            criticalImages={criticalImages}
+            enableAnalytics={import.meta.env.DEV}
+          />
+
+          {/* This is the App content that uses useLocation */}
           <AppContent />
         </SmoothScrollProvider>
       </BrowserRouter>
     </HelmetProvider>
   );
-};
-
-// Separate component to use useLocation
-const AppContent: React.FC = () => {
-  const location = useLocation();
-
-  // Routes where we want to hide Header/Footer
-  const hideLayoutRoutes = ['/equipment-finance'];
-  const hideLayout = hideLayoutRoutes.includes(location.pathname);
-
-  // GA & ResourcePreloader can stay here
-  const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-  const criticalImages: string[] = [];
-
-  return (
-    <>
-      <GoogleAnalytics trackingId={GA_TRACKING_ID} enableDevelopmentTracking={false} />
-      <ResourcePreloader criticalImages={criticalImages} enableAnalytics={import.meta.env.DEV} />
-
-      <div className="flex flex-col min-h-screen bg-gray-50">
-        {!hideLayout && (
-          <Header
-            logo={{
-              src: YTMLogo,
-              alt: 'YTM Group',
-              href: '/'
-            }}
-          />
-        )}
-
-        <main className="flex-grow">
-          <AppRouter />
-        </main>
-
-        {!hideLayout && <Footer />}
-      </div>
-    </>
-  );
-};
+}
 
 export default App;
