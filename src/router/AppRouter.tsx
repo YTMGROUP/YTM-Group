@@ -100,10 +100,10 @@ const AppRouter: React.FC = () => {
           path="*" 
           element={<RouteWrapper component={NotFoundPage} routeName="Page Not Found" />} 
         />
-        <Route 
-  path="/equipment-finance" 
-  element={<RouteWrapper component={EquipmentFinancePage} routeName="Equipment Finance" />} 
-        />
+        <Route
+  path="/services/equipment-finance"
+  element={<EquipmentFinancePage />}
+/>
       </Routes>
     </>
   );
