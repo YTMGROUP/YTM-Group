@@ -1,14 +1,22 @@
-function WordPressPage({ https://ytmfinance.staging.tactik.com.au/ }) {
+import React from 'react';
+
+const EquipmentFinancePage: React.FC = () => {
   return (
     <iframe
-      src={url}
-      title="WordPress Page"
-      style={{ width: "100%", border: "none" }}
-      onLoad={(e) => {
-        // Auto-adjust height to content
-        e.target.style.height =
-          e.target.contentWindow.document.body.offsetHeight + "px";
+      src="https://your-wp-site.com/equipment-finance"
+      title="Equipment Finance"
+      style={{ width: "100%", height: "100vh", border: "none" }}
+      onLoad={(e: React.SyntheticEvent<HTMLIFrameElement>) => {
+        const iframe = e.target as HTMLIFrameElement;
+        try {
+          const height = iframe.contentWindow?.document.body.offsetHeight;
+          if (height) iframe.style.height = height + "px";
+        } catch {
+          iframe.style.height = "100vh";
+        }
       }}
     />
   );
-}
+};
+
+export default EquipmentFinancePage; // 👈 this is the only thing that matters
