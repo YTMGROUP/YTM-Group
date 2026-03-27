@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const EquipmentFinancePage: React.FC = () => {
+
+  useEffect(() => {
+    // Add class to hide navbar + footer
+    document.body.classList.add("hide-layout");
+
+    // Cleanup when leaving page
+    return () => {
+      document.body.classList.remove("hide-layout");
+    };
+  }, []);
+
   return (
     <iframe
       src="https://ytmfinance.staging.tactik.com.au/"
@@ -19,4 +30,4 @@ const EquipmentFinancePage: React.FC = () => {
   );
 };
 
-export default EquipmentFinancePage; // 👈 this is the only thing that matters
+export default EquipmentFinancePage;
