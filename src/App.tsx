@@ -6,24 +6,39 @@ import AppRouter from '@/router/AppRouter';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
 import { useLocation } from 'react-router-dom';
 
-function App() {
-
+function AppContent() {
   const location = useLocation();
 
-// List of routes where we want to hide Header/Footer
-const hideLayoutRoutes = [
-  '/equipment-finance'
-];
+  // Routes where Header/Footer should be hidden
+  const hideLayoutRoutes = ['/services/equipment-finance'];
+  const hideLayout = hideLayoutRoutes.includes(location.pathname);
 
-const hideLayout = hideLayoutRoutes.includes(location.pathname);
-  
-  // Google Analytics Tracking ID (should be set via environment variables in production)
+  return (
+    <div className="flex flex-col min-h-screen bg-gray-50">
+      {!hideLayout && (
+        <Header 
+          logo={{
+            src: YTMLogo,
+            alt: 'YTM Group',
+            href: '/'
+          }}
+        />
+      )}
+
+      <main className={hideLayout ? "h-screen" : "flex-grow"}>
+        <AppRouter />
+      </main>
+
+      {!hideLayout && <Footer />}
+    </div>
+  );
+}
+
+function App() {
   const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
 
-  // Critical images that should be preloaded for better performance
   const criticalImages: string[] = [
-    // Additional critical images beyond what ResourcePreloader handles internally
-    // HeroPNG and YTMLogo are already handled by ResourcePreloader
+    // Any critical images for preloading
   ];
 
   return (
@@ -46,25 +61,9 @@ const hideLayout = hideLayoutRoutes.includes(location.pathname);
             criticalImages={criticalImages}
             enableAnalytics={import.meta.env.DEV}
           />
-          
 
-          <div className="flex flex-col min-h-screen bg-gray-50">
-  {!hideLayout && (
-    <Header 
-      logo={{
-        src: YTMLogo,
-        alt: 'YTM Group',
-        href: '/'
-      }}
-    />
-  )}
-  
-  <main className="flex-grow">
-    <AppRouter />
-  </main>
-  
-  {!hideLayout && <Footer />}
-</div>
+          {/* App content */}
+          <AppContent />
         </SmoothScrollProvider>
       </BrowserRouter>
     </HelmetProvider>
