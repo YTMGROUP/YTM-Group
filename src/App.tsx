@@ -1,11 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Header, Footer, GoogleAnalytics, ResourcePreloader } from '@/components';
 import { YTMLogo } from '@/assets';
 import AppRouter from '@/router/AppRouter';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
+// Content that depends on location must be inside Router
 function AppContent() {
   const location = useLocation();
 
@@ -25,7 +26,7 @@ function AppContent() {
         />
       )}
 
-      <main className={hideLayout ? "h-screen" : "flex-grow"}>
+      <main className={hideLayout ? 'h-screen' : 'flex-grow'}>
         <AppRouter />
       </main>
 
@@ -37,9 +38,7 @@ function AppContent() {
 function App() {
   const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
 
-  const criticalImages: string[] = [
-    // Any critical images for preloading
-  ];
+  const criticalImages: string[] = [];
 
   return (
     <HelmetProvider>
@@ -50,19 +49,17 @@ function App() {
         }}
       >
         <SmoothScrollProvider>
-          {/* Google Analytics */}
           <GoogleAnalytics 
             trackingId={GA_TRACKING_ID}
             enableDevelopmentTracking={false}
           />
 
-          {/* Performance Optimizations */}
           <ResourcePreloader
             criticalImages={criticalImages}
             enableAnalytics={import.meta.env.DEV}
           />
 
-          {/* App content */}
+          {/* This is the App content that uses useLocation */}
           <AppContent />
         </SmoothScrollProvider>
       </BrowserRouter>
