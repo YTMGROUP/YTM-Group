@@ -4,8 +4,19 @@ import { Header, Footer, GoogleAnalytics, ResourcePreloader } from '@/components
 import { YTMLogo } from '@/assets';
 import AppRouter from '@/router/AppRouter';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
+import { useLocation } from 'react-router-dom';
 
 function App() {
+
+  const location = useLocation();
+
+// List of routes where we want to hide Header/Footer
+const hideLayoutRoutes = [
+  '/equipment-finance'
+];
+
+const hideLayout = hideLayoutRoutes.includes(location.pathname);
+  
   // Google Analytics Tracking ID (should be set via environment variables in production)
   const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || 'G-XXXXXXXXXX';
 
@@ -38,20 +49,22 @@ function App() {
           
 
           <div className="flex flex-col min-h-screen bg-gray-50">
-            <Header 
-              logo={{
-                src: YTMLogo,
-                alt: 'YTM Group',
-                href: '/'
-              }}
-            />
-            
-            <main className="flex-grow">
-              <AppRouter />
-            </main>
-            
-            <Footer />
-          </div>
+  {!hideLayout && (
+    <Header 
+      logo={{
+        src: YTMLogo,
+        alt: 'YTM Group',
+        href: '/'
+      }}
+    />
+  )}
+  
+  <main className="flex-grow">
+    <AppRouter />
+  </main>
+  
+  {!hideLayout && <Footer />}
+</div>
         </SmoothScrollProvider>
       </BrowserRouter>
     </HelmetProvider>
