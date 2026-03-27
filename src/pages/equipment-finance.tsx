@@ -3,7 +3,7 @@ import React from 'react';
 const EquipmentFinancePage: React.FC = () => {
   return (
     <iframe
-      src="https://your-wp-site.com/equipment-finance"
+      src="https://ytmfinance.staging.tactik.com.au/"
       title="Equipment Finance"
       style={{ width: "100%", height: "100vh", border: "none" }}
       onLoad={(e: React.SyntheticEvent<HTMLIFrameElement>) => {
