@@ -91,10 +91,13 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const location = useLocation();
 
-  // Hide header on /equipment-finance page
-  if (location.pathname === '/equipment-finance') {
-    return null;
-  }
+  // Hide header on specific pages
+if (
+  location.pathname === '/equipment-finance' ||
+  location.pathname === '/thank-you'
+) {
+  return null;
+}
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { isScrolled } = useScrollPosition({ threshold: 50 });
