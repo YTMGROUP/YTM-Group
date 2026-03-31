@@ -95,15 +95,21 @@ const AppRouter: React.FC = () => {
           element={<RouteWrapper component={TermsAndConditionsPage} routeName="Terms and Conditions" />} 
         />
         
-        {/* 404 Not Found Route */}
-        <Route 
-          path="*" 
-          element={<RouteWrapper component={NotFoundPage} routeName="Page Not Found" />} 
-        />
         <Route 
   path="/equipment-finance" 
   element={<RouteWrapper component={EquipmentFinancePage} routeName="Equipment Finance" />} 
-        />
+/>
+
+        <Route 
+  path="/thank-you" 
+  element={<RouteWrapper component={ThankYouPage} routeName="Thank You" />} 
+/>
+
+{/* 404 Not Found Route */}
+<Route 
+  path="*" 
+  element={<RouteWrapper component={NotFoundPage} routeName="Page Not Found" />} 
+/>
 
       </Routes>
     </>
