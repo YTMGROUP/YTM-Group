@@ -19,6 +19,7 @@ const BusinessAdvisoryPage = React.lazy(() => import('../pages/BusinessAdvisoryP
 const BusinessInsurancePage = React.lazy(() => import('../pages/BusinessInsurancePage'));
 const PrivacyPolicyPage = React.lazy(() => import('../pages/PrivacyPolicyPage'));
 const TermsAndConditionsPage = React.lazy(() => import('../pages/TermsAndConditionsPage'));
+const ThankYouPage = React.lazy(() => import('../pages/ThankYouPage'));
 const NotFoundPage = React.lazy(() => import('../pages/NotFoundPage'));
 const EquipmentFinancePage = React.lazy(() => import('../pages/equipment-finance'));
 
