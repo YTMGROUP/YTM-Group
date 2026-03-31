@@ -21,7 +21,6 @@ const PrivacyPolicyPage = React.lazy(() => import('../pages/PrivacyPolicyPage'))
 const TermsAndConditionsPage = React.lazy(() => import('../pages/TermsAndConditionsPage'));
 const NotFoundPage = React.lazy(() => import('../pages/NotFoundPage'));
 const EquipmentFinancePage = React.lazy(() => import('../pages/equipment-finance'));
-const ThankYouPage = React.lazy(() => import('../pages/ThankYouPage'));
 
 // Enhanced route wrapper with error boundary, loading, and page transitions
 const RouteWrapper: React.FC<{ 
@@ -106,10 +105,6 @@ const AppRouter: React.FC = () => {
   element={<RouteWrapper component={EquipmentFinancePage} routeName="Equipment Finance" />} 
         />
 
-        <Route 
-  path="/thank-you" 
-  element={<RouteWrapper component={ThankYouPage} routeName="Thank You" />} 
-/>
       </Routes>
     </>
   );
