@@ -15,10 +15,13 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const location = useLocation();
 
-  // Hide footer on /equipment-finance page
-  if (location.pathname === '/equipment-finance') {
-    return null;
-  }
+  // Hide footer on specific pages
+if (
+  location.pathname === '/equipment-finance' ||
+  location.pathname === '/thank-you'
+) {
+  return null;
+}
 
   const currentYear = new Date().getFullYear();
 
