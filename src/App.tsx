@@ -14,7 +14,7 @@ function AppContent() {
  // Trigger FB Pixel on route change
   useEffect(() => {
     // Uncomment this when you want Pixel tracking
-    trackPageView();
+    // trackPageView();
   }, [location.pathname]);
 
   // Routes where Header/Footer should be hidden
