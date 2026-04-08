@@ -11,9 +11,11 @@ import { trackPageView } from "@/utils/facebookPixel";
 function AppContent() {
   const location = useLocation();
 
-  //   useEffect(() => {
-  //   trackPageView();
-  // }, [location.pathname]);
+ // Trigger FB Pixel on route change
+  useEffect(() => {
+    // Uncomment this when you want Pixel tracking
+    trackPageView();
+  }, [location.pathname]);
 
   // Routes where Header/Footer should be hidden
   const hideLayoutRoutes = ['/services/equipment-finance'];
