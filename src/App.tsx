@@ -5,10 +5,15 @@ import { YTMLogo } from '@/assets';
 import AppRouter from '@/router/AppRouter';
 import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider';
 import React from 'react';
+import { trackPageView } from "@/utils/facebookPixel";
 
 // Content that depends on location must be inside Router
 function AppContent() {
   const location = useLocation();
+
+    useEffect(() => {
+    trackPageView();
+  }, [location.pathname]);
 
   // Routes where Header/Footer should be hidden
   const hideLayoutRoutes = ['/services/equipment-finance'];
